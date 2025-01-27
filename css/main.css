@@ -125,7 +125,7 @@ body {
     padding: 0;
     right: 0;
     position: absolute;
-    background-color: #F6F6F6;
+    background-color: var(--section-background);
     min-width: 200px;
     top: 130%;
     display: none;
@@ -135,7 +135,7 @@ body {
     content: "";
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent #F6F6F6 transparent;
+    border-color: transparent transparent var(--section-background) transparent;
     position: absolute;
     right: 5px;
     top: -18px;
@@ -185,8 +185,8 @@ body {
 
 /* Start Featuers */
 .featuers{
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--section-padding);
+    padding-bottom:  var(--section-padding);
     background-color: var(--section-background);
 }
 .featuers .container{
@@ -271,3 +271,39 @@ body {
     }
   }
   /* Start Services  */
+  /* Start Protfolio */
+  .protfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+  }
+  .protfolio .protfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+
+  }
+  .protfolio .protfolio-content .card{
+    background-color: #FFFFFF;
+  }
+  .protfolio .protfolio-content .card img{
+    max-width: 100%;
+  }
+  .protfolio .protfolio-content .card .info{
+    padding: 20px;
+  }
+  .protfolio .protfolio-content .card .info h3{
+    margin: 0;
+  }
+  .protfolio .protfolio-content .card .info p{
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  @media (max-width:767px){
+    .protfolio .protfolio-content .card .info{
+       text-align: center;
+      }
+  }
+  /* End Protfolio */
